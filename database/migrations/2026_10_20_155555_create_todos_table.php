@@ -11,7 +11,8 @@ return new class extends Migration
     {
         Schema::create('todos', function (Blueprint $table) {
             $table->id();
-            $table->string('content', 20);
+            $table->foreignId('category_id')->constrained()->cascadeOnDelete();;
+            $table->text('content');
             $table->timestamps();
         });
     }

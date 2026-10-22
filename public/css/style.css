@@ -1,76 +1,168 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
+    margin: 0;
+    background: #f8f8f8;
     font-family: sans-serif;
 }
 
-.header-h1 {
-    background: #000000;
-    color: #fff;
-    padding: 20px;
-    text-align: left;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+/* ヘッダー */
+.header {
+    background: #000;
+    height: 60px;
 }
 
-.header-success {
-    background: #d1e7dd;
-    color: #0f5132;
-    border: 1px solid #badbcc;
-}
+.header-inner {
+    width: 900px;
+    height: 100%;
+    margin: 0 auto;
 
-.header-error {
-    background: #f8d7da;
-    color: #842029;
-    border: 1px solid #f5c2c7;
-}
-
-.container {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 0 20px;
-    font-family: sans-serif;
-}
-
-.todo-list {
-    list-style-type: none;
-    padding: 10px;
-
-}
-
-
-.todo-item {
-    display: block;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
-    margin-bottom: 15px;
-
-
 }
 
-.create-button {
-    background: #000000;
+.header-inner h1 {
     color: #fff;
-    padding: 6px 12px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-
+    font-size: 24px;
+    margin: 0;
 }
 
+.header-inner a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* メイン */
+.container {
+    width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+}
+
+/* タイトル */
+h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* フォーム */
+.form-row {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.form-row input[type="text"] {
+    width: 320px;
+}
+
+input,
+select {
+    height: 40px;
+    padding: 0 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    outline: none;
+}
+
+/* 共通ボタン */
+button {
+    height: 40px;
+    min-width: 100px;
+    border: none;
+    cursor: pointer;
+}
+
+/* 新規作成、検索ボタン */
+.form-row button {
+    background: #000;
+    color: #fff;
+}
+
+/* テーブル */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 2px solid #ddd;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+
+/* Todo一覧 */
+.todo-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* 更新ボタン */
 .update-button {
-    background: #0000ff;
+    background: #0066ff;
     color: #fff;
-    padding: 6px 12px;
-    border: none;
+    padding: 0 15px;
+    border-radius: 3px;
+}
+
+/* 削除ボタン */
+.delete-btn {
+    background: #ff4b4b;
+    color: #fff;
+    padding: 0 15px;
+    border-radius: 3px;
+}
+
+/* 成功メッセージ */
+.success-message {
+    width: 900px;
+    margin: 20px auto;
+    background: #d4edda;
+    color: #155724;
+    padding: 15px;
     border-radius: 4px;
-    cursor: pointer;
+}
+
+/* エラーメッセージ */
+.error-message {
+    width: 900px;
+    margin: 20px auto;
+    background: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    border-radius: 4px;
+    list-style: none;
+}
+
+.error-message p {
+    margin: 5px 0;
 
 }
 
-.delete-button {
-    background: #ff0000;
-    color: #fff;
-    padding: 6px 12px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+/* インラインフォーム */
+.inline-form {
+    display: inline-block;
+}
 
+/* 更新フォーム内 */
+.todo-item input[type="text"] {
+    width: 200px;
+}
+
+.todo-item select {
+    width: 140px;
 }
